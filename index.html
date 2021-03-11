@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Hello World</title>  
+      <title>Hello World!!</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -36,8 +36,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0; //variables for allergies
+        var cold_count = 0; //variables for cold
 
 
         function allergyAdd(){
@@ -50,12 +50,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		alert(cold_count);
         }
-	function getResults()
+	function getResults() //make sure these are word for word with the final results page
 	{ 
-	var allergyPercent= allergy_count/4*100
-	var coldPercent = cold_count/4*100
-	var resultText = document.getElementById("results");
-	 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	var allergyPercent= allergy_count/4*100 // calculations fot the allergy percentages
+	var coldPercent = cold_count/4*100 // calculations fot the cold percentages
+	var resultText = document.getElementById("results"); // will go get data from the whole app/document for the resultText 
+	 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; // full calculation for final results of app
 
 	    }
   </script>
@@ -104,53 +104,53 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>    
+        <p>Are your eyes watery or itchy?</p>    <!-- Question 1 allergy yes cold no --> 
 </div>
-    		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+    		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!-- allergy goes with yes. onclicks work -->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!-- cold goes with no. onclicks work -->
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!-- created page two successfully -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
+	<p>Do you have a fever?</p> <!-- Question 2 allergy no cold yes --> 
 	</div>
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-</div>	
-<div class="page" id="three">
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>  <!-- cold yes. onclicks work -->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>  <!-- allergy no. onclicks work --> 
+	</div>	
+<div class="page" id="three"> <!-- created page three successfully -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you have a sore throat?</p>    
+        <p>Do you have a sore throat?</p>  <!-- question 3 cold yes allergy no-->
 	</div>
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!-- cold yes. onclicks work -->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> <!-- allergy no. onclicks work -->
 	</div>	
-<div class="page" id="four">
+<div class="page" id="four"> <!-- created page four successfully -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your symptoms seasonal or chronic?</p>    
+        <p>Are your symptoms seasonal or chronic?</p>   <!-- question 4 allergy yes cold no -->  
 	</div>
-		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>  <!-- allergy yes. onclicks work -->
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!-- cold no. onclicks work -->
 	</div>
-<div class="page" id="results">
+<div class="page" id="results"> <!-- created results page successfully -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results!</h1>
-		<a onclick="getResults();" class="w3-btn w3-black"> Get Results Here! </a>
-		<p id="results"></p>
+		<h1>Results!</h1> <!-- results header -->
+		<a onclick="getResults();" class="w3-btn w3-black"> Get Results Here! </a> <!-- results button made - added getResults()-->
+		<p id="results"></p> <!-- page ID successful -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>Cold or Allergies?</p>
 </footer>
 
 </body>

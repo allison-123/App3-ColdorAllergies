@@ -17,10 +17,11 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Your goal is to make an app that might help someone figure out if they have allergies or a cold. 
+This app should flip through a series of questions and depending on the answers give a probability if it is a cold or allergy.
  
 Known Issues:
-blah, blah, blah, blah
+the footer will not pop up on other pages, but does work at the beginning and end
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -52,7 +53,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 	function getResults() //make sure these are word for word with the final results page
 	{ 
-	var allergyPercent= allergy_count/4*100 // calculations fot the allergy percentages
+	var allergyPercent= allergy_count/4*100 // calculations fotr the allergy percentages
 	var coldPercent = cold_count/4*100 // calculations fot the cold percentages
 	var resultText = document.getElementById("results"); // will go get data from the whole app/document for the resultText 
 	 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; // full calculation for final results of app
@@ -100,7 +101,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Question 1</h1>  <!-- title for this pages header -->
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -112,7 +113,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="two"> <!-- created page two successfully -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Question 2</h1>  <!-- title for this pages header -->
 	</div>
 	
 	<div id="content" class="w3-container">
@@ -123,7 +124,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>	
 <div class="page" id="three"> <!-- created page three successfully -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Question 3</h1>  <!-- title for this pages header -->
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -134,7 +135,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>	
 <div class="page" id="four"> <!-- created page four successfully -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1> <!-- title for this pages header -->
 	</div>
 	
     	<div id="content" class="w3-container">

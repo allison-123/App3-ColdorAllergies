@@ -38,7 +38,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-	var resultText = document.getElementById("results");
 
 
         function allergyAdd(){
@@ -51,11 +50,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		alert(cold_count);
         }
-	function getresults()
+	function getResults()
 	{ resultText .innerHTML
 	 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 	var allergyPercent= allergy_count/4*100
-	var coldPercent = cold_count/6*100
+	var coldPercent = cold_count/4*100
+	var resultText = document.getElementById("results");
 	    }
   </script>
 
@@ -139,15 +139,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p>    
 	</div>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 	</div>
-<div class="page" id="five">
+<div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results!</h1>
+		<a onclick="getResults();" class="w3-btn w3-black"> Get Results Here! </a>
 		<p id="results"></p>
-		<a onclick="getresults();" class="w3-btn w3-black"> Get Results Here! </a>
-	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
